@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<head>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="./style.css" rel="stylesheet"/>
+	</head>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type-"text/javascript" src="./circle.js"></script>
+
+	<body>
+		<div class="container-fluid buttonContainer">
+			<button class="btn btn-lg btn-primary" onclick="clickMe();">Click here to begin</button>
+		</div>
+		<div class="container-fluid stage hide">
+			<div class="row">
+				<div class="col-12 col-md-2 col-sm-2 control-panel hide">
+					<h3>Control Panel</h3>
+					<br/>
+					<div class="slidecontainer">
+					  <p><b>Revolving speed:</b></p>
+					  <input type="range" min="0" max="10" value="2" step="1" class="slider" id="myRange" onchange="changeSlider(this)">
+					</div>
+<!-- 					<div> Value: <span id="animationVal"></span></div>
+ -->					<br/>
+					<div><b>Delete Mode: </b>
+						<label class="switch">
+						  <input type="checkbox" id="deleteMode" onchange="toggleDelete(this)">
+						  <span class="switch-slider round"></span>
+						</label>
+					</div>
+					<br/>
+					<div class="deleteContainer">
+						<h6>List of deleted nodes:</h6>
+						<p>(Please click on any circle to delete)</p>
+						<ul id="deletedNodes"></ul>
+					</div>
+				</div>
+				<div class="col-12 col-md-9 col-sm-9">
+					<div class="mainContainer">
+						<div class="circle center-circle hide" id="Sun" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle1 hide" id="Mercury" onmouseover="showId(this)" onclick="deleteNode(this)">
+						</div>
+						<div class="circle circle2 hide" id="Venus" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle3 hide" id="Earth" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle4 hide" id="Mars" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle5 hide" id="Jupiter" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle6 hide" id="Saturn" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle7 hide" id="Uranus" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+						<div class="circle circle8 hide" id="Neptune" onmouseover="showId(this)" onclick="deleteNode(this)"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
